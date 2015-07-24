@@ -1,5 +1,9 @@
 <%= hello_message(@conn) %>
 
+<div>Some cookie: <%= cookies(@conn, "some-cookie")%></div>
+<div>First cookie: <%= cookies(@conn, "first-cookie")%></div>
+<div>Second cookie: <%= cookies(@conn, "second-cookie")%></div>
+
 <form method="POST" action="/create">
   <input type="hidden" name="_csrf_token" value="<%= get_csrf_token %>">
 

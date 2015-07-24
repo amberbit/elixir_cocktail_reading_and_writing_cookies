@@ -1,0 +1,19 @@
+<%= hello_message(@conn) %>
+
+<form method="POST" action="/create">
+  <input type="hidden" name="_csrf_token" value="<%= get_csrf_token %>">
+
+  <div>
+    <label for="first-name">First name</input>
+    <input id="first-name" type="text" name="first_name">
+  </div>
+
+  <div>
+    <label for="last-name">Last name</input>
+    <input id="last-name" type="text" name="last_name">
+  </div>
+
+  <div>
+    <input type="submit">
+  </div>
+</form>
